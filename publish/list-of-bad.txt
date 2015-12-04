@@ -1,0 +1,38 @@
+Picture67.html:  <img style="height:490px;" alt="" src="images/IMG_0073.JPG"/>
+Picture41.html:  <img style="height:490px;" alt="" src="images/IMG_0302.JPG"/>
+Picture55.html:  <img style="height:490px;" alt="" src="images/IMG_0346.JPG"/>
+Picture56.html:  <img style="height:490px;" alt="" src="images/IMG_0389.JPG"/>
+Picture8.html:  <img style="height:490px;" alt="" src="images/IMG_0465.JPG"/>
+Picture60.html:  <img style="height:490px;" alt="" src="images/IMG_0598.JPG"/>
+Picture63.html:  <img style="height:490px;" alt="" src="images/IMG_0602.JPG"/>
+Picture15.html:  <img style="height:490px;" alt="" src="images/IMG_0603.JPG"/>
+Picture49.html:  <img style="height:490px;" alt="" src="images/IMG_0678.JPG"/>
+
+Picture68.html:  <img style="height:490px;" alt="" src="images/IMG_1780.JPG"/>
+Picture79.html:  <img style="height:490px;" alt="" src="images/IMG_1736.JPG"/>
+Picture81.html:  <img style="height:490px;" alt="" src="images/IMG_1576.JPG"/>
+Picture82.html:  <img style="height:490px;" alt="" src="images/IMG_1818.JPG"/>
+
+
+Picture0.html:  <img style="height:490px;" alt="" src="images/IMG_2828.JPG"/>
+Picture23.html:  <img style="height:490px;" alt="" src="images/IMG_2822.JPG"/>
+
+Picture13.html:  <img style="height:490px;" alt="" src="images/IMG_3736.JPG"/>
+Picture19.html:  <img style="height:490px;" alt="" src="images/IMG_3680.JPG"/>
+Picture22.html:  <img style="height:490px;" alt="" src="images/IMG_3441.JPG"/>
+Picture28.html:  <img style="height:490px;" alt="" src="images/IMG_3453.JPG"/>
+Picture36.html:  <img style="height:490px;" alt="" src="images/IMG_3562.JPG"/>
+Picture37.html:  <img style="height:490px;" alt="" src="images/IMG_3716.JPG"/>
+Picture45.html:  <img style="height:490px;" alt="" src="images/IMG_3727.JPG"/>
+
+
+
+for FILE in `ls -1 *.JPG_original`
+do
+    echo $FILE `basename $FILE .JPG_original`
+    mv $FILE `basename $FILE .JPG_original`.JPG
+done
+
+
+
+
