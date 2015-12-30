@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if true
+then
+    declare -ax FRIENDS=(
+      "Nakamura"
+      "Davida"
+    )
+
+    cd /proj/pictures/
+    for FRIEND in ${FRIENDS[*]}
+    do
+        email-insert.bsh \
+            run/friends/Dec2015Template.html \
+            run/friends/Dec2015Messages.html \
+            publish/friends ${FRIEND} 2 
+    done
+    echo ''
+fi
+
