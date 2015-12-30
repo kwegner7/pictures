@@ -1,0 +1,87 @@
+
+http://kwegner7.github.io/pictures/index.html
+https://github.com/kwegner7/pictures.git
+
+#===============================================================================
+# HOW THIS WEBSITE PAGE WAS CREATED
+#===============================================================================
+
+Create a new GitHub repository at:
+    https://github.com/kwegner7/pictures 
+And this will be exported as:
+    http://kwegner7.github.io/pictures/index.html
+
+# Create a new .git folder here
+  cd /proj/pictures
+  git init
+  git add . 
+  git commit -m "Distributing Pictures"
+
+# Manually create a new repository at GitHub
+   click New Repository, then enter name "pictures", then Create, 
+   then copy the link: https://github.com/kwegner7/pictures.git
+
+# Add the new Github repository as a remote using the key:
+  git remote add github https://7155aa6db6647b440b4f3a46d534de55988f2020@github.com/kwegner7/pictures.git
+  git remote -v
+  git push github master
+
+# Create a branch so that GitHub will export and allow web pages
+# Declare a branch at the current tree
+  git branch gh-pages
+# This switches the checkout from master to gh-pages
+  git checkout gh-pages
+# This sets the push to now push the branch, not the master
+  git push -u github gh-pages
+
+# Create a backup repository on USB
+# It contains a master and a gh-pages branch.
+# It contains a remote branch called "origin"
+# The only remote for this repository is /proj/pictures/.git
+# and it is known as "origin"
+  cd /media/kurt/8GB-BLUE4/git
+  git clone --mirror /proj/pictures/.git
+  cd pictures.git && git remote -v
+      origin  /proj/pictures/.git (fetch)
+      origin  /proj/pictures/.git (push)
+  
+# Back at the origin, git the new backup repository a remote name
+# and push to it
+  cd /proj/pictures
+  git remote add usb /media/kurt/8GB-BLUE4/git/pictures.git 
+# This sets push to push from the gh-pages branch of origin
+# to the gh-pages branch of usb
+  git push -u usb gh-pages
+  git diff gh-pages usb/gh-pages
+
+# This simplifies the push commands
+  git push -u github gh-pages
+  git push -u backup gh-pages
+
+git remote -v
+git branch -v
+
+git push github
+git push backup
+
+
+ 7155aa6db6647b440b4f3a46d534de55988f2020  
+
+git push https://7155aa6db6647b440b4f3a46d534de55988f2020@github.com/kwegner7/pictures.git gh-pages
+
+https://github.com/blog/1270-easier-builds-and-deployments-using-git-over-https-and-oauth
+
+
+
+Hi Bruce,
+
+I have created 3 use cases that relate to each of the database tables that you have described. There may be mistakes here so let me know about them. The following is a link to a single html containing all 3:
+
+http://kwegner7.github.io/pictures/publish
+
+I used a tool called "umlet" to create the Use Case Diagrams. I manually created the HTML5 code. Both of these are easy to modify and if this kind of documentation is useful we can collaborate in the cloud on things like this.
+
+Kurt
+
+
+
